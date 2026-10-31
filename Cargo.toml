@@ -1,0 +1,37 @@
+[workspace]
+members = ["core", "src-tauri"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Creeper Core Team"]
+
+[workspace.dependencies]
+anyhow = "1.0"
+base64 = "0.22"
+chrono = { version = "0.4", features = ["serde"] }
+futures-util = "0.3"
+hex = "0.4"
+md-5 = "0.10"
+regex = "1.11"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "stream", "gzip", "multipart"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha1 = "0.10"
+sha2 = "0.10"
+sysinfo = "0.33"
+thiserror = "2.0"
+tokio = { version = "1.44", features = ["fs", "io-util", "macros", "process", "rt-multi-thread", "sync", "time"] }
+toml = "0.8"
+uuid = { version = "1.16", features = ["v4", "serde"] }
+walkdir = "2.5"
+zip = { version = "2.4", default-features = false, features = ["deflate"] }
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+opt-level = "s"
+panic = "abort"
+strip = true

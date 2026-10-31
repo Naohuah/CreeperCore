@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "CreeperCore",
+  "version": "0.1.0",
+  "identifier": "com.creepercore.launcher",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "appDirectoriesOverride": "CreeperCore",
+    "windows": [
+      {
+        "label": "main",
+        "title": "苦力怕启动器 · Creeper Core",
+        "width": 1000,
+        "height": 640,
+        "minWidth": 920,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": false,
+        "transparent": false,
+        "center": true,
+        "visible": true,
+        "shadow": true,
+        "theme": "Light",
+        "dragDropEnabled": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' asset: http://asset.localhost data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self'; connect-src ipc: http://ipc.localhost http://127.0.0.1:1420 ws://127.0.0.1:1420"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "createUpdaterArtifacts": false,
+    "icon": [
+      "icons/32x32.png",
+      "icons/48x48.png",
+      "icons/64x64.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/256x256.png",
+      "icons/icon.ico",
+      "icons/icon.png"
+    ],
+    "shortDescription": "苦力怕主题的 Minecraft 启动器",
+    "longDescription": "Creeper Core 是一个快速、可靠、苦力怕主题的 Minecraft 启动器，内置实例隔离、模组管理、存档时光机与 Creeper Sense 启动诊断。",
+    "copyright": "Creeper Core Team",
+    "category": "Game",
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser",
+        "displayLanguageSelector": false
+      }
+    }
+  }
+}
