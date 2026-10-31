@@ -19,8 +19,6 @@ Creeper Core 不是一个网页套壳。它分成两层：
 - **Creeper Core（Rust）**：版本继承解析、Mojang 规则求值、并行下载、SHA-1 校验、Java 探测、参数拼装、进程守护、崩溃识别、模组元数据、ZIP 备份。
 - **Creeper Shell（Tauri + React）**：窗口、权限、typed IPC、启动页、实例管理、皮肤与披风、外观自定义。
 
-界面目标是 PCL2 式的直接与克制：以“启动”为中心，优先显示真实状态，而不是装饰卡片。
-
 ## 下载
 
 从 [Releases](https://github.com/Naohuah/CreeperCore/releases/latest) 下载 `CreeperCore.exe`，放到一个**可写目录**双击运行。
