@@ -20,3 +20,5 @@ CreeperCore/
 release/
 .pnpm-store/
 
+
+/src-tauri/gen/
